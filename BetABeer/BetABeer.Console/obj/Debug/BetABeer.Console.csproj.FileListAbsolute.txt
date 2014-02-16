@@ -1,0 +1,12 @@
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Console\bin\Debug\BetABeer.Console.exe.config
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Console\obj\Debug\BetABeer.Console.csprojResolveAssemblyReference.cache
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Console\bin\Debug\BetABeer.Console.exe
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Console\bin\Debug\BetABeer.Console.pdb
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Console\bin\Debug\BetABeer.Model.dll
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Console\bin\Debug\EntityFramework.dll
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Console\bin\Debug\EntityFramework.SqlServer.dll
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Console\bin\Debug\BetABeer.Model.pdb
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Console\bin\Debug\EntityFramework.xml
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Console\bin\Debug\EntityFramework.SqlServer.xml
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Console\obj\Debug\BetABeer.Console.exe
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Console\obj\Debug\BetABeer.Console.pdb

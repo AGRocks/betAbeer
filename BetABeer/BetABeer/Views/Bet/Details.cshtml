@@ -1,0 +1,74 @@
+﻿@model BetABeer.Model.ModelEntities.Bet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bet</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookieUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bookie.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RewardId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reward.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TheManUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TheMan.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RewardsCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RewardsCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DueDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

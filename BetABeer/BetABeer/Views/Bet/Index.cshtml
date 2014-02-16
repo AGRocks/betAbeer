@@ -1,0 +1,69 @@
+﻿@model IEnumerable<BetABeer.Model.ModelEntities.Bet>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>"ALL BETS ARE OFF.."</h2>
+
+<p>
+    @Html.ActionLink("Bet that..", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BookieUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RewardId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TheManUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RewardsCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bookie.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reward.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TheMan.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RewardsCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DueDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

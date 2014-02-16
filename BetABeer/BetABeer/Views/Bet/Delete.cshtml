@@ -1,0 +1,80 @@
+﻿@model BetABeer.Model.ModelEntities.Bet
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Bet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookieUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bookie.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RewardId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reward.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TheManUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TheMan.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RewardsCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RewardsCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DueDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

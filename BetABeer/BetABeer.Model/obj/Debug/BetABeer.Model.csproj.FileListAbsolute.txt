@@ -1,0 +1,12 @@
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Model\bin\BetABeer.Model.dll.config
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Model\bin\BetABeer.Model.dll
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Model\bin\BetABeer.Model.pdb
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Model\bin\EntityFramework.dll
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Model\bin\EntityFramework.SqlServer.dll
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Model\bin\EntityFramework.xml
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Model\bin\EntityFramework.SqlServer.xml
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Model\obj\Debug\BetABeer.Model.csprojResolveAssemblyReference.cache
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Model\obj\Debug\BetABeer.Model.dll
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Model\obj\Debug\BetABeer.Model.pdb
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Model\obj\Debug\BetABeer.Model.Migrations.InitialMigration.resources
+F:\Development\GitHub\betabeer\BetABeer\BetABeer.Model\obj\Debug\BetABeer.Model.csproj.GenerateResource.Cache
