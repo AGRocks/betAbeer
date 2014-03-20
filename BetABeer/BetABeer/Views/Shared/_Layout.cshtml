@@ -10,6 +10,11 @@
 <body>
     @RenderBody()
 
+    <h2>Login</h2>
+
+    @Html.ActionLink("Login with Google", "ExternalLogin", "Account", new { provider = "google" }, null)
+
+
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 </body>

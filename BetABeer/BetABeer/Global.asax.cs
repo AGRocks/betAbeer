@@ -24,6 +24,9 @@ namespace BetABeer
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+
+            // auth
+            OAuthConfig.RegisterProviders();
         }
     }
 }
