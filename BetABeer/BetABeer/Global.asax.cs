@@ -26,7 +26,7 @@ namespace BetABeer
             GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 
             // auth
-            OAuthConfig.RegisterProviders();
+            //OAuthConfig.RegisterProviders();
         }
     }
 }

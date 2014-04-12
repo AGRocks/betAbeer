@@ -204,25 +204,22 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\OAuthConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SignalRConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\BaseCRUDController.cs" />
     <Compile Include="Controllers\Api\BetApiController.cs" />
     <Compile Include="Controllers\Api\RewardApiController.cs" />
+    <Compile Include="Controllers\Api\UserApiController.cs" />
     <Compile Include="Controllers\BetController.cs" />
-    <Compile Include="Controllers\BookieController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SecureController.cs" />
-    <Compile Include="Filters\SimpleMembershipAttribute.cs" />
+    <Compile Include="Controllers\RewardController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Hubs\BetNotificationsHub.cs" />
-    <Compile Include="Membership\ModelMembershipProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -318,17 +315,28 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Bookie\Bookie.cshtml" />
     <Content Include="Views\Bet\Create.cshtml" />
     <Content Include="Views\Bet\Delete.cshtml" />
     <Content Include="Views\Bet\Details.cshtml" />
     <Content Include="Views\Bet\Edit.cshtml" />
     <Content Include="Views\Bet\Index.cshtml" />
+    <Content Include="Views\Reward\Create.cshtml" />
+    <Content Include="Views\Reward\Delete.cshtml" />
+    <Content Include="Views\Reward\Details.cshtml" />
+    <Content Include="Views\Reward\Edit.cshtml" />
+    <Content Include="Views\Reward\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Auth\" />
+    <Folder Include="Filters\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Membership\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
