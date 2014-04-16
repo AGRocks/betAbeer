@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,7 @@ namespace BetABeer.Model.ModelEntities
 {
     public class Bet : IClientEntity
     {
+        [Key]
         public long Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
@@ -36,6 +38,6 @@ namespace BetABeer.Model.ModelEntities
         public long BookieUserId { get; set; }
 
         [DisplayName("Gambler")]
-        public long TheManUserId { get; set; }
+        public long? TheManUserId { get; set; }
     }
 }

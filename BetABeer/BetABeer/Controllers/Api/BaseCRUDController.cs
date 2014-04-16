@@ -39,7 +39,7 @@ namespace BetABeer.Api.Controllers
         }
 
         // PUT api/T/5
-        public virtual HttpResponseMessage Put(long id, [FromBody] T entity)
+        public virtual HttpResponseMessage Put(long id, T entity)
         {
             if (ModelState.IsValid && id == entity.Id)
             {

@@ -22,12 +22,14 @@ namespace BetABeer.Model.Utilities
     public class Repository<T> : IRepository<T> where T : class, IClientEntity
     {
         private DbSet<T> context;
-        private IUnitOfWork _unitOfWork;
+        private IUnitOfWork unitOfWork;
+        private IDbDataProvider dataProvider;
 
         public Repository(IDbDataProvider dataProvider)
         {
-            context = dataProvider.GetDbSet<T>();
-            _unitOfWork = dataProvider as IUnitOfWork;
+            this.context = dataProvider.GetDbSet<T>();
+            this.dataProvider = dataProvider;
+            unitOfWork = dataProvider as IUnitOfWork;
         }
 
         public void Insert(T entity)
@@ -61,22 +63,42 @@ namespace BetABeer.Model.Utilities
         }
 
         public void Attach(T entity)
+        {            
+            var entry = this.dataProvider.ContextEntry(entity);
+
+            if (entry.State == EntityState.Detached)
+            {
+                var currentEntry = this.context.Find(entity.Id);
+                if (currentEntry != null)
+                {
+                    var attachedEntry = this.dataProvider.ContextEntry(currentEntry);
+                    attachedEntry.CurrentValues.SetValues(entity);
+                }
+                else
+                {
+                    this.context.Attach(entity);
+                    entry.State = EntityState.Modified;
+                }
+            }
+        }
+
+        private object GetPrimaryKey(System.Data.Entity.Infrastructure.DbEntityEntry<T> entry)
         {
-            context.Attach(entity);
+            throw new NotImplementedException();
         }
 
         #region IUnitOfWork Members
 
         public void Save()
         {
-            if (_unitOfWork != null)
-                _unitOfWork.Save();
+            if (unitOfWork != null)
+                unitOfWork.Save();
         }
 
         public Task SaveAsync()
         {
-            if (_unitOfWork != null)
-                return _unitOfWork.SaveAsync();
+            if (unitOfWork != null)
+                return unitOfWork.SaveAsync();
 
             return Task.Delay(0);
         }

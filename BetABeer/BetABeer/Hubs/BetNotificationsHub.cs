@@ -12,5 +12,10 @@ namespace BetABeer.Hubs
         {
             Clients.All.newBetArrived(betId);
         }
+
+        public void BetAccepted(long betId, long userId)
+        {
+            Clients.All.betAccepted(betId, userId);
+        }
     }
 }

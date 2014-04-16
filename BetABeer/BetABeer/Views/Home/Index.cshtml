@@ -10,6 +10,7 @@
         <div data-bind="template: { foreach: avaliableBets, afterAdd: showBetElement } " style="background-color:green;">
             <div data-bind="text: Title"></div>
             <div data-bind="text: Description"></div>
+            <button data-bind="click: $parent.acceptBet"/>
         </div>
     </div>
 </div>

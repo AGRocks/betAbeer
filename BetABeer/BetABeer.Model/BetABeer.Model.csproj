@@ -40,11 +40,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -70,9 +72,14 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\ModelContext.cs" />
     <Compile Include="Migrations\201402080034312_Initial-Migration.cs" />
     <Compile Include="Migrations\201402080034312_Initial-Migration.Designer.cs">
       <DependentUpon>201402080034312_Initial-Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201404162305065_NullableManInBet.cs" />
+    <Compile Include="Migrations\201404162305065_NullableManInBet.Designer.cs">
+      <DependentUpon>201404162305065_NullableManInBet.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelContext.cs" />
@@ -97,6 +104,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201402080034312_Initial-Migration.resx">
       <DependentUpon>201402080034312_Initial-Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201404162305065_NullableManInBet.resx">
+      <DependentUpon>201404162305065_NullableManInBet.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

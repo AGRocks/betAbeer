@@ -40,6 +40,23 @@
         this.showBetElement = function (elem) {
             if (elem.nodeType === 1) $(elem).hide().slideDown()
         }
+        this.acceptBet = function (bet) {
+            
+            bet.TheManUserId = 1; // test. should be integrated with auth
+
+            $.ajax({
+                url: apiUrl + "/" + bet.Id,
+                cache: false,
+                async: true,
+                type: 'PUT',
+                data: JSON.stringify(bet),
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
+                success: function (result) {
+                    alert(result);
+                }
+            });
+        };
 
         var initializeHubs = function () { 
             var betsHub = $.connection.betNotificationsHub;            

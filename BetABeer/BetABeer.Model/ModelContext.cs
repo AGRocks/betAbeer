@@ -3,13 +3,14 @@ using BetABeer.Model.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 
 namespace BetABeer.Model
 {
-    public class ModelContext : DbContext, IDbDataProvider, IUnitOfWork
+    public partial class ModelContext : DbContext, IDbDataProvider, IUnitOfWork
     {
         public ModelContext()
             : base("DefaultConnection")
@@ -38,6 +39,12 @@ namespace BetABeer.Model
         public async Task SaveAsync()
         {
             await base.SaveChangesAsync();
+        }
+
+
+        public DbEntityEntry<T> ContextEntry<T>(T entity) where T : class
+        {
+            return this.Entry(entity);
         }
     }
 }
