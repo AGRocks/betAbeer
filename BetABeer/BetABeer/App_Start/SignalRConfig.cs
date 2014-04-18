@@ -1,12 +1,12 @@
 ﻿using Owin;
 using Microsoft.Owin;
-[assembly: OwinStartup(typeof(SignalRChat.Startup))]
+[assembly: OwinStartup(typeof(BetABeer.Startup))]
 
-namespace SignalRChat
+namespace BetABeer
 {
     public partial class Startup
     {
-        public void Configuration(IAppBuilder app)
+        public void ConfigureSignalR(IAppBuilder app)
         {
             // Any connection or hub wire up and configuration should go here
             app.MapSignalR();
