@@ -12,7 +12,7 @@
 
     @if (!@User.Identity.IsAuthenticated)
     {    
-        @Html.ActionLink("Login with Google", "ExternalLogin", "Account", new { provider = "google" }, null)
+        @Html.ActionLink("Login with Google", "ExternalLogin", "Account", new { provider = "google", returnUrl = "/" }, null)
     }
     else
     {

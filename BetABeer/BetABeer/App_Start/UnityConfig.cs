@@ -4,6 +4,9 @@ using Unity.Mvc5;
 using BetABeer.Model.Utilities;
 using BetABeer.Model;
 using System.Web.Http;
+using Microsoft.AspNet.Identity;
+using BetABeer.Models;
+using BetABeer.Controllers;
 
 namespace BetABeer
 {
@@ -18,7 +21,9 @@ namespace BetABeer
 
             // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<IDbDataProvider, ModelContext>(new HierarchicalLifetimeManager())
-                     .RegisterType(typeof(IRepository<>), typeof(Repository<>), new HierarchicalLifetimeManager());
+                     .RegisterType(typeof(IRepository<>), typeof(Repository<>), new HierarchicalLifetimeManager());                 
+
+            container.RegisterType<AccountController>(new InjectionConstructor());
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new Microsoft.Practices.Unity.WebApi.UnityDependencyResolver(container);
